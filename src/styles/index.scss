@@ -1,0 +1,54 @@
+@import './indexPage/header';
+@import './indexPage/aboutUs';
+@import './indexPage/nums';
+@import './indexPage/offer';
+@import './indexPage/features';
+@import './indexPage/payounts';
+@import './indexPage/work';
+@import './indexPage/design';
+@import './indexPage/partners';
+@import './indexPage/follow_us';
+@import './indexPage/footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background: #0B0B0C;
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+}
+
+section{
+    padding: 0 20px;
+}
+
+.main_video{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+
+    #video-background{
+        max-width: 1920px;
+        width: 100%;
+    }
+}

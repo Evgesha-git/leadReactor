@@ -1,0 +1,234 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#main_wrapper {
+    .green {
+        color: $green;
+    }
+    .bold {
+        font-weight: 700;
+    }
+    .features {
+        border: 1px solid transparent;
+        position: relative;
+        background: $bg;
+        padding-bottom: 16px;
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            background: $bg;
+            height: 150px;
+            transform: translateY(-100%);
+            // transform-origin: left top;
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+            z-index: 2;
+            border-bottom: 2px solid linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            content: "";
+            background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
+            transform: translateY(-100%);
+            height: 153px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+            // z-index: -2;
+        }
+
+        .container {
+            padding-top: 61px;
+            max-width: 1380px;
+            margin: 0 auto;
+
+            .top {
+                max-width: 719px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+
+                .title {
+                    color: $white;
+                    text-align: center;
+                    font-family: SF Pro Display;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 52.007px;
+                }
+
+                .desc {
+                    color: $white;
+                    text-align: center;
+                    font-family: SF Pro Display;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 25px;
+                }
+
+                .join {
+                    padding: 18px 26px;
+                    background: $green;
+                    border-radius: 980px;
+
+                    color: $black;
+                    text-align: center;
+                    font-family: SF Pro Display;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                }
+            }
+
+            .carts {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                margin-top: 40px;
+
+                .cart {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 60px 75px 80px;
+                    min-height: 400px;
+                    background: $bg5;
+                    border-radius: 30px;
+
+                    &.last{
+                        grid-column: span 2;
+                    }
+
+                    .title {
+                        color: $white;
+                        text-align: center;
+                        font-family: SF Pro Display;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%;
+                    }
+                }
+
+                // .cart {
+                //     border-radius: 40px;
+                //     padding: 100px 0;
+                //     height: 600px;
+                //     display: flex;
+                //     flex-direction: column;
+                //     justify-content: flex-end;
+
+                //     &:first-child {
+                //         justify-content: flex-start;
+                //     }
+
+                //     .title {
+                //         color: $white;
+                //         text-align: center;
+                //         font-family: SF Pro Display;
+                //         font-size: 36px;
+                //         font-style: normal;
+                //         font-weight: 700;
+                //         line-height: 100%; /* 36px */
+                //         text-transform: uppercase;
+                //     }
+
+                //     &.statics {
+                //         background: url(../../images/statistic.png) $black;
+                //         background-repeat: no-repeat;
+                //         background-position: center bottom -40px;
+                //     }
+
+                //     &.payouts {
+                //         background: url(../../images/payounts.png) $black;
+                //         background-repeat: no-repeat;
+                //         background-position: top -30px center;
+
+                //         .title {
+                //             position: relative;
+                //             z-index: 9999;
+                //             &::after {
+                //                 position: absolute;
+                //                 display: block;
+                //                 content: "";
+                //                 bottom: 19px;
+                //                 left: 0;
+                //                 right: 0;
+                //                 height: 146px;
+                //                 background: $black;
+                //                 filter: blur(32px);
+                //                 z-index: -1;
+                //             }
+                //         }
+                //     }
+
+                //     &.approval {
+                //         background: url(../../images/approval.png) $black;
+                //         background-repeat: no-repeat;
+                //         background-position: top 16px center;
+
+                //         .title {
+                //             position: relative;
+                //             z-index: 9999;
+                //             &::after {
+                //                 position: absolute;
+                //                 display: block;
+                //                 content: "";
+                //                 bottom: 0;
+                //                 left: 0;
+                //                 right: 0;
+                //                 height: 146px;
+                //                 background: $black;
+                //                 filter: blur(32px);
+                //                 z-index: -1;
+                //             }
+                //         }
+                //     }
+
+                //     &.support {
+                //         background: url(../../images/support.png) $black;
+                //         background-repeat: no-repeat;
+                //         background-position: top 45px center;
+                //     }
+
+                //     &.calls {
+                //         grid-column: span 2;
+                //         background: url(../../images/call.svg) $black;
+                //         background-repeat: no-repeat;
+                //         background-position: center;
+
+                //         .title {
+                //             position: relative;
+                //             z-index: 9999;
+                //             &::after {
+                //                 position: absolute;
+                //                 display: block;
+                //                 content: "";
+                //                 bottom: -100px;
+                //                 left: 0;
+                //                 right: 0;
+                //                 height: 265px;
+                //                 background: $black;
+                //                 filter: blur(32px);
+                //                 z-index: -1;
+                //             }
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+}

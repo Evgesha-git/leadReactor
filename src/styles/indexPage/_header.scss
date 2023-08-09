@@ -1,0 +1,69 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#main_wrapper {
+    // background: url(../../images/bg.png) #0B0B0C;
+    // background-repeat: no-repeat;
+    // background-position: top -113px center;
+    .header {
+        padding: 20px 20px 0;
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            padding: 7px 0;
+            border-radius: 500px;
+            background: #000;
+
+            .logo {
+                color: $white;
+                font-family: Muller;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+                letter-spacing: 5.76px;
+                text-transform: uppercase;
+            }
+
+            .nav {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+
+                ul {
+                    display: flex;
+                    gap: 40px;
+                    align-items: center;
+
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        font-family: SF Pro Display;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 48px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .sign_in {
+                margin-right: 9px;
+                border: none;
+                background: $green;
+                color: $black;
+                padding: 9px 24px;
+                text-align: center;
+                font-family: SF Pro Display;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 500;
+                border-radius: 160px;
+            }
+        }
+    }
+}

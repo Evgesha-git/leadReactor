@@ -1,0 +1,114 @@
+@import "../var/var";
+@import "../fonts/fonts";
+
+#main_wrapper {
+    .about_us {
+        // border: 1px solid transparent;
+        overflow: hidden;
+        position: relative;
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            bottom: -60px;
+            left: 0;
+            right: 0;
+            // width: 2000px;
+            height: 490px;
+            background: #0b0b0c;
+            filter: blur(32px);
+            z-index: -1;
+        }
+
+        .container {
+            // position: relative;
+            max-width: 1164px;
+            margin: 0 auto;
+
+            .title {
+                color: $green;
+                font-family: SF Pro Display;
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                margin-top: 122px;
+            }
+
+            .desc {
+                color: $white;
+                font-family: SF Pro Display;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 25px;
+                margin-top: 10px;
+            }
+
+            .buttons {
+                display: flex;
+                gap: 15px;
+                margin-top: 196px;
+
+                .sign_in {
+                    background: $green;
+                    width: 100px;
+                    color: #000;
+                    text-align: center;
+                    font-family: SF Pro Display;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 48px;
+                    border-radius: 980px;
+                }
+
+                .sign_up {
+                    border-radius: 1px;
+                    border: 1px solid $white2;
+                    background: $bg4;
+                    width: 109px;
+                    border-radius: 980px;
+
+
+                    color: $white;
+                    text-align: center;
+                    font-family: SF Pro Display;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                }
+            }
+
+            .about {
+                max-width: 725px;
+                margin: 263px auto 60px;
+                background: #0b0b0c;
+                position: relative;
+                z-index: 99999;
+
+                .title {
+                    color: $white;
+                    text-align: center;
+                    font-family: SF Pro Display;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 52.007px;
+                }
+
+                .text {
+                    margin-top: 15px;
+                    color: $white;
+                    text-align: center;
+                    font-family: SF Pro Display;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}
