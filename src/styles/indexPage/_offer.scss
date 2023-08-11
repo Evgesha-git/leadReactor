@@ -7,10 +7,15 @@
         padding-top: 150px;
         padding-bottom: 177px;
         border: 1px solid transparent;
+        position: relative;
 
         .container {
             max-width: 1380px;
             margin: 0 auto;
+            // position: relative;
+            // position: relative;
+            z-index: 999;
+            height: 600px;
 
             .title {
                 color: $white;
@@ -20,6 +25,8 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: 52.007px;
+                position: relative;
+                z-index: 9999;
             }
 
             .desc {
@@ -31,6 +38,19 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 25px;
+                position: relative;
+                z-index: 9999;
+            }
+            // .join {
+            // }
+
+            .main_canva {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                color: #fff;
             }
 
             .items {
@@ -49,6 +69,8 @@
                     width: 100%;
                     max-width: 322px;
                     max-height: 550px;
+                    position: relative;
+                    min-height: 393px;
 
                     .text {
                         color: $white;
@@ -59,6 +81,8 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 27.001px;
+                        position: relative;
+                        z-index: 999;
                     }
 
                     .title {
@@ -70,10 +94,19 @@
                         font-weight: 600;
                         line-height: 44px;
                         margin-top: 10px;
+                        position: relative;
+                        z-index: 999;
                     }
 
                     .img {
                         margin-top: 45px;
+                    }
+                    .canvas3d {
+                        position: absolute;
+                        top: 10px;
+                        bottom: 10px;
+                        left: 10px;
+                        right: 10px;
                     }
                 }
             }

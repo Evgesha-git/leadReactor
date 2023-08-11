@@ -4,7 +4,7 @@
 #main_wrapper {
     .partners {
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 54px;
 
         .container {
             max-width: 1160px;
@@ -52,6 +52,15 @@
                             filter: brightness(100%) grayscale(0%);
                         }
                     }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .partners {
+            .container {
+                .partners__items {
+                    justify-content: center;
                 }
             }
         }

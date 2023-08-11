@@ -35,6 +35,14 @@
                 margin-top: 122px;
             }
 
+            .line{
+                margin-top: 21px;
+                height: 2px;
+                max-width: 455px;
+                margin-left: 0;
+                background: linear-gradient(270deg, rgba(2, 255, 121, 0.00) 0%, #02FF79 48.79%, rgba(2, 255, 121, 0.00) 100%);
+            }
+
             .desc {
                 color: $white;
                 font-family: SF Pro Display;
@@ -42,7 +50,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 25px;
-                margin-top: 10px;
+                margin-top: 22px;
             }
 
             .buttons {
@@ -60,15 +68,12 @@
                     font-style: normal;
                     font-weight: 500;
                     line-height: 48px;
-                    border-radius: 980px;
                 }
 
                 .sign_up {
-                    border-radius: 1px;
                     border: 1px solid $white2;
-                    background: $bg4;
+                    background: transparent;
                     width: 109px;
-                    border-radius: 980px;
 
 
                     color: $white;
@@ -96,6 +101,7 @@
                     font-style: normal;
                     font-weight: 600;
                     line-height: 52.007px;
+                    margin-top: 0;
                 }
 
                 .text {
@@ -107,6 +113,79 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 25px;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1500px) {
+        .about_us {
+    
+            .container {
+    
+                .title {
+                    font-size: 60px;
+                    margin-top: 122px;
+                }
+    
+                .desc {
+                    font-size: 20px;
+                    line-height: 25px;
+                    margin-top: 10px;
+                }
+    
+                .buttons {
+                    margin-top: 146px;
+                }
+    
+                .about {
+                    margin: 163px auto 60px;
+    
+                    .title {
+                        font-size: 36px;
+                        line-height: 52.007px;
+                    }
+    
+                    .text {
+                        margin-top: 15px;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1150px) {
+        .about_us {
+    
+            .container {
+    
+                .title {
+                    font-size: 60px;
+                    margin-top: 90px;
+                }
+    
+                .desc {
+                    font-size: 20px;
+                    line-height: 25px;
+                    margin-top: 10px;
+                }
+    
+                .buttons {
+                    margin-top: 100px;
+                }
+    
+                .about {
+                    margin: 110px auto 60px;
+    
+                    .title {
+                        font-size: 36px;
+                        line-height: 52.007px;
+                    }
+    
+                    .text {
+                        margin-top: 15px;
+                        font-size: 17px;
+                    }
                 }
             }
         }

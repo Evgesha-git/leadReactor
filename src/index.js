@@ -1,7 +1,7 @@
 import "./html/index.html";
 import "./styles/index.scss";
 
-import { animatePayounts, mainScroll, animateGsap } from "./scripts/animate";
+import { animateGsap } from "./scripts/animate";
 
 document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById("video-background");
@@ -21,5 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
     playButton.addEventListener("click", playVideo);
 });
 
-// mainScroll();
+
 animateGsap();
