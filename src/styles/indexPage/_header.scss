@@ -18,6 +18,10 @@
             // border-radius: 500px;
             // background: #000;
 
+            .mobile_nav {
+                display: none;
+            }
+
             .logo {
                 h2 {
                     color: $white;
@@ -42,7 +46,7 @@
                     align-items: center;
                     height: 49px;
 
-                    li{
+                    li {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -86,6 +90,144 @@
                 font-size: 17px;
                 font-style: normal;
                 font-weight: 500;
+
+                &:hover {
+                    background: $green2;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 892px) {
+        .header {
+            padding: 20px 20px 0;
+            .container {
+                max-width: 1160px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 40px;
+                padding: 20px 0 7px;
+                // border-radius: 500px;
+                // background: #000;
+
+                .mobile_nav {
+                    display: block;
+                    // position: relative;
+
+                    .burger{
+                        position: absolute;
+                        top: 40px;
+                        right: 28px;
+                        width: 25px;
+                        height: 25px;
+                        padding: 6px 2px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        z-index: 99999;
+
+                        &.active{
+                            
+                            span:first-child{
+                                transform: rotate(45deg);
+                                transform-origin: left;
+                                width: 75%;
+                            }
+                            span:nth-child(2){
+                                transform: scale(0);
+                            }
+                            span:last-child{
+                                transform: rotate(-45deg);
+                                transform-origin: left;
+                                width: 75%;
+                            }
+                        }
+
+                        span{
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            border-radius: 2px;
+                            background: $green;
+                            transition: .3s linear;
+                        }
+                    }
+
+                    .hide_nav {
+                        position: fixed;
+                        display: flex;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        // bottom: 0;
+                        transform: scale(1, 0);
+                        transition: .3s linear;
+                        background: $bg;
+                        transform-origin: top;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 30px;
+                        overflow: hidden;
+                        max-height: 0;
+
+                        &.active {
+                            transform: scale(1, 1);
+                            z-index: 9999;
+                            bottom: 0;
+                            max-height: 100vh;
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 30px;
+                            li {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: flex-end;
+                                height: 100%;
+                            }
+
+                            a {
+                                color: $white;
+                                text-decoration: none;
+                                font-family: SF Pro Display;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                &:hover + .line {
+                                    width: 90%;
+                                }
+                            }
+
+                            .line {
+                                margin: 9px 3px 4px;
+                                height: 1px;
+                                background: $white;
+                                transition: width 0.2s linear;
+                                width: 0%;
+                            }
+                        }
+                    }
+                }
+
+                .logo {
+                    padding-top: 3px;
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+
+                .nav {
+                    display: none;
+                }
             }
         }
     }

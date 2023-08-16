@@ -7,46 +7,16 @@
         padding-top: 100px;
         overflow-x: clip;
 
-        // &::before {
-        //     position: absolute;
-        //     display: block;
-        //     content: "";
-        //     bottom: 0;
-        //     left: 0;
-        //     right: 0;
-        //     background: $bg;
-        //     height: 170px;
-        //     transform: translateY(100%);
-        //     // transform-origin: left top;
-        //     clip-path: polygon(0 0, 100% 100%, 100% 0);
-        //     z-index: 2;
-        //     border-bottom: 2px solid linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
-        // }
-
-        // &::after {
-        //     position: absolute;
-        //     display: block;
-        //     bottom: 0;
-        //     left: 0;
-        //     right: 0;
-        //     content: "";
-        //     background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
-        //     transform: translateY(100%);
-        //     height: 173px;
-        //     clip-path: polygon(0 0, 100% 100%, 100% 0);
-        //     // z-index: -2;
-        // }
-
         .line_mask {
             position: absolute;
             transform-origin: left;
-            width: 103%;
+            width: 110%;
             background: $bg;
-            bottom: 3px;
+            bottom: 0;
             left: 0;
             transform-origin: left;
             transform: rotate(5.12deg);
-            height: 165px;
+            height: 400px;
             display: flex;
             align-items: flex-end;
         }
@@ -71,6 +41,8 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                position: relative;
+                z-index: 999;
 
                 .title {
                     color: $white;

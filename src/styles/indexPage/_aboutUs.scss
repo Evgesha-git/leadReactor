@@ -24,9 +24,10 @@
             // position: relative;
             max-width: 1164px;
             margin: 0 auto;
+            border: 1px solid transparent;
 
             .title {
-                color: $green;
+                color: $white;
                 font-family: SF Pro Display;
                 font-size: 60px;
                 font-style: normal;
@@ -35,12 +36,12 @@
                 margin-top: 122px;
             }
 
-            .line{
+            .line {
                 margin-top: 21px;
                 height: 2px;
                 max-width: 455px;
                 margin-left: 0;
-                background: linear-gradient(270deg, rgba(2, 255, 121, 0.00) 0%, #02FF79 48.79%, rgba(2, 255, 121, 0.00) 100%);
+                background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
             }
 
             .desc {
@@ -58,6 +59,11 @@
                 gap: 15px;
                 margin-top: 196px;
 
+                .sign_in,
+                .sign_up {
+                    height: 48px;
+                }
+
                 .sign_in {
                     background: $green;
                     width: 100px;
@@ -68,21 +74,30 @@
                     font-style: normal;
                     font-weight: 500;
                     line-height: 48px;
+
+                    &:hover {
+                        background: $green2;
+                    }
                 }
 
                 .sign_up {
-                    border: 1px solid $white2;
+                    border: none;
                     background: transparent;
                     width: 109px;
 
+                    &:hover {
+                        svg {
+                            rect {
+                                fill: #1e1e1e;
+                            }
 
-                    color: $white;
-                    text-align: center;
-                    font-family: SF Pro Display;
-                    font-size: 17px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 140%;
+                            linearGradient{
+                                stop{
+                                    stop-opacity: 1;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -91,7 +106,7 @@
                 margin: 263px auto 60px;
                 background: #0b0b0c;
                 position: relative;
-                z-index: 99999;
+                z-index: 999;
 
                 .title {
                     color: $white;
@@ -119,32 +134,29 @@
     }
     @media only screen and (max-width: 1500px) {
         .about_us {
-    
             .container {
-    
                 .title {
                     font-size: 60px;
                     margin-top: 122px;
                 }
-    
+
                 .desc {
                     font-size: 20px;
                     line-height: 25px;
-                    margin-top: 10px;
                 }
-    
+
                 .buttons {
                     margin-top: 146px;
                 }
-    
+
                 .about {
                     margin: 163px auto 60px;
-    
+
                     .title {
                         font-size: 36px;
                         line-height: 52.007px;
                     }
-    
+
                     .text {
                         margin-top: 15px;
                         font-size: 17px;
@@ -156,32 +168,68 @@
 
     @media only screen and (max-width: 1150px) {
         .about_us {
-    
             .container {
-    
                 .title {
                     font-size: 60px;
                     margin-top: 90px;
                 }
-    
+
                 .desc {
                     font-size: 20px;
                     line-height: 25px;
-                    margin-top: 10px;
                 }
-    
+
                 .buttons {
                     margin-top: 100px;
                 }
-    
+
                 .about {
                     margin: 110px auto 60px;
-    
+
                     .title {
                         font-size: 36px;
                         line-height: 52.007px;
                     }
-    
+
+                    .text {
+                        margin-top: 15px;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .about_us {
+            &::before {
+                bottom: 0px;
+            }
+
+            .container {
+                .title {
+                    font-size: 34px;
+                    margin-top: 306px;
+                }
+
+                .desc {
+                    font-size: 14px;
+                    line-height: 140%;
+                    margin-top: 20px;
+                }
+
+                .buttons {
+                    margin-top: 50px;
+                }
+
+                .about {
+                    margin: 227px auto 60px;
+
+                    .title {
+                        font-size: 36px;
+                        line-height: 52.007px;
+                    }
+
                     .text {
                         margin-top: 15px;
                         font-size: 17px;

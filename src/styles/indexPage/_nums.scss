@@ -6,18 +6,18 @@
         border: 1px solid transparent;
         position: relative;
         background: $bg;
-        z-index: 9999;
+        z-index: 99;
         overflow-x: clip;
 
         .line_mask {
             position: absolute;
-            width: 103%;
+            width: 110%;
             background: $bg;
-            bottom: 4px;
-            left: 0;
+            bottom: -2px;
+            right: 0;
             transform-origin: right;
             transform: rotate(-5deg);
-            height: 165px;
+            height: 400px;
             display: flex;
             align-items: flex-end;
         }
@@ -76,16 +76,20 @@
     }
     @media only screen and (max-width: 460px) {
         .nums {
+            padding-bottom: 24px;
             .container {
-                flex-direction: column;
-                justify-content: center;
-                flex-wrap: wrap;
+                // flex-direction: column;
+                // justify-content: center;
+                // flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
                 .item {
                     .title {
-                        font-size: 36px;
+                        font-size: 24px;
                     }
                     .desc {
-                        font-size: 18px;
+                        font-size: 14px;
                     }
                 }
             }

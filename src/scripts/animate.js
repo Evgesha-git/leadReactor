@@ -1,7 +1,43 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import anime from "animejs";
 
 export const animateGsap = () => {
+    const clientWidth = window.innerWidth;
+
+    let textStart = "bottom bottom-=100";
+    let textEnd = "top center-=200";
+    let partnersStart = "bottom bottom-=100";
+    let partnersEnd = "top center-=200";
+    let followStart = "bottom bottom-=100";
+    let followEnd = "top center-=200";
+
+    const border = document.querySelectorAll(".item_rotate_animate");
+    const deg = { agile: 0 };
+
+    anime({
+        targets: deg,
+        agile: 360,
+        loop: true,
+        easing: "linear",
+        duration: 10000,
+        change: function () {
+            border.forEach((item) => {
+                item.style.background = `linear-gradient(${deg.agile}deg, rgba(2,255,121,1) 0%, rgba(2,255,121,0) 27%)`;
+            });
+        },
+    });
+
+    if (clientWidth <= 500) {
+        textStart = "top bottom-=100";
+        textEnd = "top center+=100";
+        partnersStart = "top bottom+=400";
+        partnersEnd = "top center+=300";
+        followStart = "top bottom+=200";
+        followEnd = "top center+=100";
+    }
+
+    console.log(clientWidth);
     if (ScrollTrigger.isTouch !== 1) {
         const container = document.querySelector(".payments");
         if (!container) return;
@@ -16,17 +52,46 @@ export const animateGsap = () => {
         const itemsL = gsap.utils.toArray(".left_animate");
         const itemsR = gsap.utils.toArray(".right_animate");
         const itemsW = gsap.utils.toArray(".animate_tl");
-        // const lineR = gsap.utils.toArray(".green_line_r");
-        // const lineL = gsap.utils.toArray(".green_line_l");
         const lines = gsap.utils.toArray(".green_line");
         const linesDL = gsap.utils.toArray(".green_line_dl");
+        const imgs = gsap.utils.toArray(".animate_img");
+
+        gsap.fromTo(
+            ".animate_partners",
+            { opacity: 0, yPercent: 100 },
+            {
+                opacity: 1,
+                yPercent: 0,
+                scrollTrigger: {
+                    trigger: ".animate_partners",
+                    start: partnersStart,
+                    end: partnersEnd,
+                    scrub: true,
+                },
+            }
+        );
+
+        gsap.fromTo(
+            ".animate_follow",
+            { opacity: 0, yPercent: 100 },
+            {
+                opacity: 1,
+                yPercent: 0,
+                scrollTrigger: {
+                    trigger: ".animate_follow",
+                    start: followStart,
+                    end: followEnd,
+                    scrub: true,
+                },
+            }
+        );
 
         linesDL.forEach((line) => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: line,
-                    start: "top center+=300",
-                    end: "top center-=300",
+                    start: "top center+=500",
+                    end: "top center-=700",
                     scrub: true,
                 },
             });
@@ -58,8 +123,8 @@ export const animateGsap = () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: line,
-                    start: "top center+=300",
-                    end: "top center-=300",
+                    start: "top center+=500",
+                    end: "top center-=700",
                     scrub: true,
                 },
             });
@@ -84,41 +149,6 @@ export const animateGsap = () => {
             );
         });
 
-        // lineR.forEach((item) => {
-        //     gsap.fromTo(
-        //         item,
-        //         { rotate: 5, scaleX: 0 },
-        //         {
-        //             scaleX: 1,
-        //             duration: 2,
-        //             scrollTrigger: {
-        //                 trigger: item,
-        //                 start: "top center",
-        //                 end: "top center-=100",
-
-        //                 // scrub: true,
-        //             },
-        //         }
-        //     );
-        // });
-        // lineL.forEach((item) => {
-        //     gsap.fromTo(
-        //         item,
-        //         { rotate: -5, scaleX: 0 },
-        //         {
-        //             scaleX: 1,
-        //             duration: 2,
-        //             scrollTrigger: {
-        //                 trigger: item,
-        //                 start: "top center",
-        //                 end: "top center-=100",
-
-        //                 // scrub: true,
-        //             },
-        //         }
-        //     );
-        // });
-
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".animate_tl_main",
@@ -128,10 +158,6 @@ export const animateGsap = () => {
             },
         });
 
-        // itemsW.forEach(item => {
-        //     tl.fromTo(item, {opacity: 0, xPercent: 100}, {opacity: 1, xPercent: 0});
-        // });
-
         gsap.fromTo(
             itemsW[0],
             { opacity: 0, xPercent: -100 },
@@ -139,7 +165,7 @@ export const animateGsap = () => {
                 opacity: 1,
                 xPercent: 0,
                 scrollTrigger: {
-                    trigger: ".animate_tl_main",
+                    trigger: itemsW[0],
                     start: "top bottom",
                     end: "top center-=100",
                     scrub: true,
@@ -153,7 +179,7 @@ export const animateGsap = () => {
                 opacity: 1,
                 xPercent: 0,
                 scrollTrigger: {
-                    trigger: ".animate_tl_main",
+                    trigger: itemsW[2],
                     start: "top bottom",
                     end: "top center-=100",
                     scrub: true,
@@ -167,28 +193,45 @@ export const animateGsap = () => {
                 opacity: 1,
                 yPercent: 0,
                 scrollTrigger: {
-                    trigger: ".animate_tl_main",
-                    start: "top bottom",
-                    end: "top center-=100",
+                    trigger: itemsW[1],
+                    start: "top bottom+=400",
+                    end: "top center+=300",
                     scrub: true,
                 },
             }
         );
 
-        gsap.fromTo(
-            ".center_animate",
-            { opacity: 0, yPercent: 100 },
-            {
-                opacity: 1,
-                yPercent: 0,
-                scrollTrigger: {
-                    trigger: ".center_animate",
-                    start: "top bottom",
-                    end: "bottom center",
-                    scrub: true,
-                },
-            }
-        );
+        if (clientWidth <= 1100) {
+            gsap.fromTo(
+                ".center_animate",
+                { opacity: 0, rotate: 35 },
+                {
+                    opacity: 1,
+                    rotate: 0,
+                    scrollTrigger: {
+                        trigger: ".center_animate",
+                        start: "top bottom",
+                        end: "top center",
+                        scrub: true,
+                    },
+                }
+            );
+        } else {
+            gsap.fromTo(
+                ".center_animate",
+                { opacity: 0, yPercent: 100 },
+                {
+                    opacity: 1,
+                    yPercent: 0,
+                    scrollTrigger: {
+                        trigger: ".center_animate",
+                        start: "top bottom+=200",
+                        end: "top center+=200",
+                        scrub: true,
+                    },
+                }
+            );
+        }
 
         itemsL.forEach((item) => {
             gsap.fromTo(
@@ -250,8 +293,25 @@ export const animateGsap = () => {
                     yPercent: 0,
                     scrollTrigger: {
                         trigger: item,
-                        start: "bottom bottom-=100",
-                        end: "top center-=200",
+                        start: textStart,
+                        end: textEnd,
+                        scrub: true,
+                    },
+                }
+            );
+        });
+
+        imgs.forEach((item) => {
+            gsap.fromTo(
+                item,
+                { opacity: 0, yPercent: 100 },
+                {
+                    opacity: 1,
+                    yPercent: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top bottom+=100",
+                        end: "top center-=100",
                         scrub: true,
                     },
                 }

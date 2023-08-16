@@ -1,32 +1,68 @@
-@import './indexPage/header';
-@import './indexPage/aboutUs';
-@import './indexPage/nums';
-@import './indexPage/offer';
-@import './indexPage/features';
-@import './indexPage/payounts';
-@import './indexPage/work';
-@import './indexPage/design';
-@import './indexPage/partners';
-@import './indexPage/follow_us';
-@import './indexPage/footer';
-@import './indexPage/other_offer';
+@import "./indexPage/header";
+@import "./indexPage/aboutUs";
+@import "./indexPage/nums";
+@import "./indexPage/offer";
+@import "./indexPage/features";
+@import "./indexPage/payounts";
+@import "./indexPage/work";
+@import "./indexPage/design";
+@import "./indexPage/partners";
+@import "./indexPage/follow_us";
+@import "./indexPage/footer";
+@import "./indexPage/other_offer";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img{
+html {
+    // scroll-behavior: smooth;
+}
+
+img {
     display: block;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-body{
-    background: #0B0B0C;
+body {
+    background: #0b0b0c;
+    &.active {
+        overflow: hidden;
+    }
+}
+
+#main_wrapper {
+    position: relative;
+    overflow: hidden;
+
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: -99999;
+        background: $bg;
+
+        &.active {
+            display: flex;
+            z-index: 99999;
+        }
+
+        img {
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+    }
 }
 
 .button {
@@ -35,22 +71,41 @@ body{
     border-radius: 5px;
 }
 
-section{
+section {
     padding: 0 20px;
 }
 
-.main_video{
+.main_video {
     position: absolute;
     z-index: -1;
     width: 100%;
     right: 0;
-    left: 0;
+    // left: 0;
     top: 0;
     display: flex;
     justify-content: center;
+    min-width: 1200px;
 
-    #video-background{
+    #video-background {
         max-width: 1920px;
         width: 100%;
+    }
+}
+
+.animate_text,
+.animate_tl,
+.green_line,
+.left_animate,
+.right_animate,
+.animate,
+.green_line_dl,
+.animate_img {
+    will-change: transform;
+}
+
+@media only screen and (max-width: 500px) {
+    .main_video {
+        left: auto;
+        right: -28%;
     }
 }
