@@ -51,7 +51,7 @@
             max-width: 1160px;
             margin: 0 auto;
             position: relative;
-            z-index: 9999;
+            z-index: 2;
 
             .title {
                 color: $white;
@@ -84,6 +84,10 @@
                     position: relative;
                     z-index: 9;
 
+                    &:hover .main_item{
+                        background: $bg7;
+                    }
+
                     .item_rotate_animate {
                         position: absolute;
                         top: -2px;
@@ -104,6 +108,9 @@
                         z-index: 1;
                         background: $bg6;
                         border-radius: 40px;
+                        transition: .3s;
+
+                        
                     }
 
                     .text {
@@ -191,7 +198,7 @@
                         width: 100%;
                     }
 
-                    button[type="submit"] {
+                    .button {
                         padding: 18px 26px;
                         width: max-content;
                         background: $green;

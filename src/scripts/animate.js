@@ -20,7 +20,7 @@ export const animateGsap = () => {
         agile: 360,
         loop: true,
         easing: "linear",
-        duration: 10000,
+        duration: 8000,
         change: function () {
             border.forEach((item) => {
                 item.style.background = `linear-gradient(${deg.agile}deg, rgba(2,255,121,1) 0%, rgba(2,255,121,0) 27%)`;
@@ -55,6 +55,25 @@ export const animateGsap = () => {
         const lines = gsap.utils.toArray(".green_line");
         const linesDL = gsap.utils.toArray(".green_line_dl");
         const imgs = gsap.utils.toArray(".animate_img");
+        const itemsHover = gsap.utils.toArray('.animate_hover');
+
+        if (clientWidth <= 700) {
+            itemsHover.forEach(item => {
+                gsap.fromTo(
+                    item,
+                    {background: '#212225'},
+                    {
+                        background: '#4B4D53',
+                        scrollTrigger: {
+                            trigger: item,
+                            start: 'top bottom-=200',
+                            end: 'bottom center',
+                            scrub: true,
+                        }
+                    }
+                )
+            })
+        }
 
         gsap.fromTo(
             ".animate_partners",

@@ -8,7 +8,31 @@
     <body class="active">
         <div id="main_wrapper">
             <div class="preloader active">
-                <img src="../images/preloader/spinner.svg" alt="spinner">
+                <img src="../images/preloader/spinner.svg" alt="spinner" />
+            </div>
+            <div class="hide_nav">
+                <ul>
+                    <li>
+                        <a href="#about">About us</a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#features">Why us</a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#follow_us">Follow Us</a>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a
+                            href="https://auth-wm.leadreaktor.com/oauth2/authorize?client_id=d9674690-2d33-4a6b-91cf-ae74beb14fc9&redirect_uri=https%3A%2F%2Fweb.leadreaktor.com%2Flogin&scope=openid%20profile%20email%20offline_access&response_type=code&state=&audience=d9674690-2d33-4a6b-91cf-ae74beb14fc9"
+                            class="sign_in"
+                            >Sign in</a
+                        >
+                        <div class="line"></div>
+                    </li>
+                </ul>
             </div>
             <div class="main_video">
                 <video autoplay muted playsinline loop id="video-background" loading="lazy" poster="../images/bg.png">
@@ -36,8 +60,15 @@
                                 <a href="#follow_us">Follow Us</a>
                                 <div class="line"></div>
                             </li>
+                            <li>
+                                <a
+                                    href="https://auth-wm.leadreaktor.com/oauth2/authorize?client_id=d9674690-2d33-4a6b-91cf-ae74beb14fc9&redirect_uri=https%3A%2F%2Fweb.leadreaktor.com%2Flogin&scope=openid%20profile%20email%20offline_access&response_type=code&state=&audience=d9674690-2d33-4a6b-91cf-ae74beb14fc9"
+                                    class="sign_in"
+                                    >Sign in</a
+                                >
+                                <div class="line"></div>
+                            </li>
                         </ul>
-                        <button class="button sign_in">Sign in</button>
                     </nav>
                     <nav class="mobile_nav">
                         <div class="burger">
@@ -45,23 +76,7 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="hide_nav">
-                            <ul>
-                                <li>
-                                    <a href="#about">About us</a>
-                                    <div class="line"></div>
-                                </li>
-                                <li>
-                                    <a href="#features">Why us</a>
-                                    <div class="line"></div>
-                                </li>
-                                <li>
-                                    <a href="#follow_us">Follow Us</a>
-                                    <div class="line"></div>
-                                </li>
-                            </ul>
-                            <button class="button sign_in">Sign in</button>
-                        </div>
+                        
                     </nav>
                 </div>
             </header>
@@ -79,8 +94,15 @@
                         </p>
 
                         <div class="buttons">
-                            <button class="button sign_in">Sign in</button>
-                            <button class="button sign_up">
+                            <a
+                                href="https://auth-wm.leadreaktor.com/oauth2/authorize?client_id=d9674690-2d33-4a6b-91cf-ae74beb14fc9&redirect_uri=https%3A%2F%2Fweb.leadreaktor.com%2Flogin&scope=openid%20profile%20email%20offline_access&response_type=code&state=&audience=d9674690-2d33-4a6b-91cf-ae74beb14fc9"
+                                class="button sign_in"
+                                >Sign in</a
+                            >
+                            <a
+                                href="https://auth-wm.leadreaktor.com/oauth2/register?tenantId=5eabc4bc-30d4-4969-a208-68aa76368aa8&client_id=d9674690-2d33-4a6b-91cf-ae74beb14fc9&nonce=&redirect_uri=https%3A%2F%2Fweb.leadreaktor.com%2Flogin&response_mode=&response_type=code&scope=openid%20profile%20email%20offline_access&state=&timezone=&metaData.device.name=&metaData.device.type=UNKNOWN&code_challenge=&code_challenge_method=&user_code="
+                                class="button sign_up"
+                            >
                                 <svg width="109" height="48" viewBox="0 0 109 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="108" height="47" rx="4.5" stroke="url(#paint0_linear_398_1299)" />
                                     <path
@@ -95,7 +117,7 @@
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
 
                         <div class="about" id="about">
@@ -183,7 +205,11 @@
                                 <span class="bold"><span class="green">Why</span> do the thousands of affiliates choose <span class="green">LeadReaktor?</span></span> <br />Thanks to our expertise in
                                 the nutra vertical and control of every step of the process we can guarantee unparalleled performances to our affiliates
                             </p>
-                            <button class="button join animate_text">Join</button>
+                            <a
+                                href="https://auth-wm.leadreaktor.com/oauth2/register?tenantId=5eabc4bc-30d4-4969-a208-68aa76368aa8&client_id=d9674690-2d33-4a6b-91cf-ae74beb14fc9&nonce=&redirect_uri=https%3A%2F%2Fweb.leadreaktor.com%2Flogin&response_mode=&response_type=code&scope=openid%20profile%20email%20offline_access&state=&timezone=&metaData.device.name=&metaData.device.type=UNKNOWN&code_challenge=&code_challenge_method=&user_code="
+                                class="button join animate_text"
+                                >Join</a
+                            >
                         </div>
                         <div class="carts">
                             <div class="cart left_animate">
@@ -345,7 +371,7 @@
                         <h2 class="title animate_text">Other famous top offers</h2>
                         <div class="items">
                             <div class="item">
-                                <div class="main_item"></div>
+                                <div class="main_item animate_hover"></div>
                                 <p class="text">Health</p>
                                 <h3 class="title">Black Maca</h3>
                                 <div class="img">
@@ -354,7 +380,7 @@
                                 <div class="item_rotate_animate"></div>
                             </div>
                             <div class="item">
-                                <div class="main_item"></div>
+                                <div class="main_item animate_hover"></div>
                                 <p class="text">Adult</p>
                                 <h3 class="title">Detoxin</h3>
                                 <div class="img">
@@ -363,7 +389,7 @@
                                 <div class="item_rotate_animate"></div>
                             </div>
                             <div class="item">
-                                <div class="main_item"></div>
+                                <div class="main_item animate_hover"></div>
                                 <p class="text">Health</p>
                                 <h3 class="title">Diolix Caps</h3>
                                 <div class="img">
@@ -372,7 +398,7 @@
                                 <div class="item_rotate_animate"></div>
                             </div>
                             <div class="item">
-                                <div class="main_item"></div>
+                                <div class="main_item animate_hover"></div>
                                 <p class="text">Joints</p>
                                 <h3 class="title">Lipoxin</h3>
                                 <div class="img">
@@ -393,12 +419,18 @@
                                 <span class="green">Join Leadreaktor today!</span>
                             </p>
                             <form action="">
-                                <input type="text" name="name" id="" required placeholder="Name" />
+                                <!-- <input type="text" name="name" id="" required placeholder="Name" />
                                 <input type="email" name="email" id="" required placeholder="Email " />
                                 <input type="text" name="messenger" id="" placeholder="Telegram" />
                                 <input type="text" name="cod" id="" placeholder="Do you have experience with nutra COD?" />
-                                <input type="text" name="spend" id="" placeholder="What is your monthly ad spend? " />
-                                <button type="submit" class="button">Sign up</button>
+                                <input type="text" name="spend" id="" placeholder="What is your monthly ad spend? " /> -->
+                                <!-- Пока заглушка -->
+                                <a
+                                    href="https://auth-wm.leadreaktor.com/oauth2/register?tenantId=5eabc4bc-30d4-4969-a208-68aa76368aa8&client_id=d9674690-2d33-4a6b-91cf-ae74beb14fc9&nonce=&redirect_uri=https%3A%2F%2Fweb.leadreaktor.com%2Flogin&response_mode=&response_type=code&scope=openid%20profile%20email%20offline_access&state=&timezone=&metaData.device.name=&metaData.device.type=UNKNOWN&code_challenge=&code_challenge_method=&user_code="
+                                    type="submit"
+                                    class="button"
+                                    >Sign up</a
+                                >
                             </form>
                         </div>
                         <p class="sub_text animate_text">
@@ -451,7 +483,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="follow_us" >
+                <section class="follow_us">
                     <div class="line_mask">
                         <div class="green_line_dl"></div>
                     </div>
@@ -461,19 +493,19 @@
                             <p class="text animate_text">We have several social network accounts. For more information and the latest news subscribe to one of the social media below</p>
                             <div class="follow_us__items animate_follow">
                                 <div class="item">
-                                    <a href="#"><img src="../images/follow_us/cpa.png" alt="#" /></a>
+                                    <a href="https://cpa.club/p/welcome" target="_blank"><img src="../images/follow_us/cpa.png" alt="#" /></a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="../images/follow_us/fb.png" alt="#" /></a>
+                                    <a href="https://www.facebook.com/leadreaktor" target="_blank"><img src="../images/follow_us/fb.png" alt="#" /></a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="../images/follow_us/ig.png" alt="#" /></a>
+                                    <a href="https://www.instagram.com/leadreaktor.team/"><img src="../images/follow_us/ig.png" alt="#" /></a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="../images/follow_us/tg.png" alt="#" /></a>
+                                    <a href="https://t.me/leadreaktor_cpa"><img src="../images/follow_us/tg.png" alt="#" /></a>
                                 </div>
                                 <div class="item">
-                                    <a href="#"><img src="../images/follow_us/stm.png" alt="#" /></a>
+                                    <a href="https://stmforum.com" target="_blank"><img src="../images/follow_us/stm.png" alt="#" /></a>
                                 </div>
                             </div>
                         </div>

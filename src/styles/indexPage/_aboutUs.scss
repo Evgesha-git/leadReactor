@@ -6,19 +6,20 @@
         // border: 1px solid transparent;
         overflow: hidden;
         position: relative;
-        &::before {
-            position: absolute;
-            display: block;
-            content: "";
-            bottom: -60px;
-            left: 0;
-            right: 0;
-            // width: 2000px;
-            height: 490px;
-            background: #0b0b0c;
-            filter: blur(32px);
-            z-index: -1;
-        }
+        z-index: 3;
+        // &::before {
+        //     position: absolute;
+        //     display: block;
+        //     content: "";
+        //     bottom: -90px;
+        //     left: 0;
+        //     right: 0;
+        //     // width: 2000px;
+        //     height: 220px;
+        //     background: #0b0b0c;
+        //     filter: blur(32px);
+        //     z-index: -1;
+        // }
 
         .container {
             // position: relative;
@@ -33,7 +34,7 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: 100%;
-                margin-top: 122px;
+                margin-top: 240px;
             }
 
             .line {
@@ -104,7 +105,7 @@
             .about {
                 max-width: 725px;
                 margin: 263px auto 60px;
-                background: #0b0b0c;
+                // background: #0b0b0c;
                 position: relative;
                 z-index: 999;
 
