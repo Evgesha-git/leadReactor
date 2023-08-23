@@ -25,7 +25,7 @@
         .green_line_dl {
             width: 103%;
             height: 2px;
-            background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
+            background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, $green 48.79%, rgba(2, 255, 121, 0) 100%);
             transform-origin: left;
             opacity: 0;
             // transform: rotate(2.39deg);

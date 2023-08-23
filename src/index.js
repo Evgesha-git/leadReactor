@@ -26,11 +26,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
         const container = document.querySelector(".mobile_nav");
-        const button = container.querySelector(".burger");
-        const menu = container.querySelector(".hide_nav");
+        const button = document.querySelector(".burger");
+        const menu = document.querySelector(".hide_nav");
+        const logo = document.querySelector(".logo");
+
         button.classList.remove("active");
         menu.classList.remove("active");
         document.body.classList.remove("active");
+        logo.classList.remove("active");
 
         document.querySelector(this.getAttribute("href")).scrollIntoView({
             behavior: "smooth",
@@ -42,7 +45,7 @@ burger();
 
 animateGsap();
 
-window.addEventListener('load', () => {
-    document.body.classList.remove('active');
-    document.querySelector('.preloader').classList.remove('active');
-})
+window.addEventListener("load", () => {
+    document.body.classList.remove("active");
+    document.querySelector(".preloader").classList.remove("active");
+});

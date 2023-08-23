@@ -32,7 +32,7 @@
         .green_line_dl {
             width: 103%;
             height: 2px;
-            background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
+            background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, $green 48.79%, rgba(2, 255, 121, 0) 100%);
             transform-origin: left;
         }
 
@@ -94,7 +94,7 @@
                         right: -2px;
                         bottom: -2px;
                         left: -2px;
-                        background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
+                        background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, $green 48.79%, rgba(2, 255, 121, 0) 100%);
                         z-index: -1;
                         border-radius: 40px;
                     }
@@ -153,7 +153,7 @@
             }
 
             .form_container {
-                margin-top: 152px;
+                // margin-top: 152px;
 
                 .form_title {
                     color: $white;

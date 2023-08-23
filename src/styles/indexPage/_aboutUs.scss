@@ -42,7 +42,7 @@
                 height: 2px;
                 max-width: 455px;
                 margin-left: 0;
-                background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, #02ff79 48.79%, rgba(2, 255, 121, 0) 100%);
+                background: linear-gradient(270deg, rgba(2, 255, 121, 0) 0%, $green 48.79%, rgba(2, 255, 121, 0) 100%);
             }
 
             .desc {
@@ -104,10 +104,11 @@
 
             .about {
                 max-width: 725px;
-                margin: 263px auto 60px;
+                margin: 203px auto 60px;
+                padding-top: 60px;
                 // background: #0b0b0c;
                 position: relative;
-                z-index: 999;
+                z-index: 3;
 
                 .title {
                     color: $white;
@@ -118,6 +119,7 @@
                     font-weight: 600;
                     line-height: 52.007px;
                     margin-top: 0;
+                    
                 }
 
                 .text {
@@ -151,7 +153,7 @@
                 }
 
                 .about {
-                    margin: 163px auto 60px;
+                    margin: 103px auto 60px;
 
                     .title {
                         font-size: 36px;
@@ -185,7 +187,7 @@
                 }
 
                 .about {
-                    margin: 110px auto 60px;
+                    margin: 50px auto 60px;
 
                     .title {
                         font-size: 36px;
@@ -224,7 +226,7 @@
                 }
 
                 .about {
-                    margin: 227px auto 60px;
+                    margin: 167px auto 60px;
 
                     .title {
                         font-size: 36px;
